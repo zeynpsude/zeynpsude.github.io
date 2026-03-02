@@ -1,1 +1,15 @@
 
+.profil-resmi {
+    width: 100px;          /* Resmin genişliği */
+    height: 100px;         /* Resmin yüksekliği */
+    border-radius: 50%;    /* Resmi tam yuvarlak yapar */
+    object-fit: cover;     /* Resmin bozulmadan sığmasını sağlar */
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 15px;    /* İsimle resim arasındaki boşluk */
+}
+
+h1 {
+    display: inline-block;
+    vertical-align: middle;
+}
