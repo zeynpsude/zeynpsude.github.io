@@ -1,14 +1,16 @@
-
+/* Resmin devasa görünmesini engellemek ve yuvarlak yapmak için */
 .profil-resmi {
-    width: 100px;          /* Resmin genişliği */
-    height: 100px;         /* Resmin yüksekliği */
-    border-radius: 50%;    /* Resmi tam yuvarlak yapar */
-    object-fit: cover;     /* Resmin bozulmadan sığmasını sağlar */
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 15px;    /* İsimle resim arasındaki boşluk */
+    width: 100px;           /* Genişlik 100 piksel */
+    height: 100px;          /* Yükseklik 100 piksel */
+    border-radius: 50%;     /* Tam yuvarlak yapar */
+    object-fit: cover;      /* Resmin basık görünmesini engeller */
+    display: inline-block;  /* Yanındaki yazıyla aynı hizada durmasını sağlar */
+    vertical-align: middle; /* Yazıyla dikeyde ortalar */
+    margin-right: 15px;     /* İsimle resim arasına boşluk bırakır */
+    border: 2px solid #ccc; /* İsteğe bağlı: Etrafına ince bir çerçeve ekler */
 }
 
+/* İsmin resmin yanında düzgün durması için */
 h1 {
     display: inline-block;
     vertical-align: middle;
