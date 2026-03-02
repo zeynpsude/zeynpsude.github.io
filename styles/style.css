@@ -1,7 +1,7 @@
 /* Resmin devasa görünmesini engellemek ve yuvarlak yapmak için */
 .profil-resmi {
-    width: 50px;           /* Genişlik 100 piksel */
-    height: 50px;          /* Yükseklik 100 piksel */
+    width: 100px;           /* Genişlik 100 piksel */
+    height: 100px;          /* Yükseklik 100 piksel */
     border-radius: 50%;     /* Tam yuvarlak yapar */
     object-fit: cover;      /* Resmin basık görünmesini engeller */
     display: inline-block;  /* Yanındaki yazıyla aynı hizada durmasını sağlar */
