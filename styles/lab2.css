@@ -1,0 +1,98 @@
+/* Grup Seçici: Genel yazı tipi ve renk ayarı */
+body, h1, h2, p {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #333;
+    margin: 0;
+} [cite: 364]
+
+body {
+    background-color: #f4f4f9;
+    padding: 30px;
+}
+
+/* Sayfa Çerçevesi */
+.page-container {
+    background-color: #ffffff;
+    border: 1px solid #ccc; /* Dış ince gri çerçeve */
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 4px;
+}
+
+/* Üst Başlık ve Menü Çizgisi */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    background-color: #f0f2f8;
+    border-bottom: 2px solid #dee2e6; /* Menü altındaki çizgi */
+} [cite: 360]
+
+/* Yatay Menü Elemanları */
+.top-nav ul li {
+    display: inline-block; /* Menüyü yatay yapar */
+    margin-left: 10px;
+} [cite: 358]
+
+/* Hiyerarşik Seçici: Linklerin görünümü */
+.top-nav ul li a {
+    text-decoration: none;
+    padding: 8px 15px;
+    color: #555;
+    border-radius: 4px;
+    transition: 0.3s;
+} [cite: 364]
+
+.top-nav ul li a:hover {
+    background-color: #8fa3d8; /* Görseldeki mavi buton rengi */
+    color: white;
+} [cite: 359]
+
+/* Açıklama Metni Alanı */
+.description {
+    padding: 25px;
+    border-bottom: 1px solid #eee;
+}
+
+/* İKİ SÜTUNLU DÜZEN (BORDERLAR BURADA) */
+.layout-flex {
+    display: flex; /* Kutuları yan yana getirir */
+    padding: 25px;
+    gap: 20px;
+} 
+
+/* Sol Sütun (Sarı Kutu) */
+.main-content {
+    flex: 1.5;
+    background-color: #fef5d4; /* Pastel Sarı */
+    padding: 20px;
+    border: 1px solid #f9e1a0; /* SARI BORDER */
+    border-radius: 8px;
+    text-align: justify;
+} 
+
+/* Sağ Sütun (Mavi Kutu) */
+.sidebar {
+    flex: 1;
+    background-color: #e3f2fd; /* Pastel Mavi */
+    padding: 20px;
+    border: 1px solid #bbdefb; /* MAVİ BORDER */
+    border-radius: 8px;
+} 
+
+/* Metin Ayarları */
+p {
+    margin-top: 10px;
+    line-height: 1.6; /* Satır aralığı */
+    font-size: 15px;
+} 
+
+/* Alt Bilgi */
+.main-footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #ddd;
+    font-size: 14px;
+} [cite: 363]
