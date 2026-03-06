@@ -2,44 +2,44 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>Lab 2</title>
+    <title>CSS Temel Ödevi</title>
     <link rel="stylesheet" href="styles/lab2.css">
 </head>
 <body>
-
-    <div class="wrapper">
-        <header>
-            <div class="header-text">
-                <h1>CSS Temel Ödevi</h1>
-            </div>
+    <div class="main-wrapper">
+        <header class="top-header">
+            <h1>CSS Temel Ödevi</h1>
             <nav>
-                <ul>
-                    <li><a href="index.html">Ana Sayfa</a></li>
-                    <li><a href="about.html">Hakkımda</a></li>
-                    <li><a href="lab2.html" style="background:#94a3d8; color:white;">Lab 2</a></li>
-                    <li><a href="contact.html">İletişim</a></li>
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link active">Ana Sayfa</a></li>
+                    <li><a href="about.html" class="nav-link">Hakkımda</a></li>
+                    <li><a href="lab2.html" class="nav-link">Hizmetler</a></li>
+                    <li><a href="contact.html" class="nav-link">İletişim</a></li>
                 </ul>
             </nav>
         </header>
 
-        <div class="main-container">
-            <main class="content-box">
+        <section class="intro-text">
+            <p>Verilen benzer bir düzenle basit bir web sayfası oluşturun. CSS'in temel özelliklerini uygulayın. Sadece HTML5 + CSS3 kullanın. [cite: 357, 365]</p>
+        </section>
+
+        <main class="columns-container">
+            <section class="left-column">
                 <h2>İçerik</h2>
-                <p>Bu alanda örnek içerik metinleri bulunmaktadır. CSS özellikleriyle bu metinler arasında <strong>boşluklar</strong> (line-height) ve hizalamalar (text-align) düzenlenebilir. [cite: 356]</p>
-                <p>Önce CSS ile kutuları yan yana getirmeyi öğrendik. Şimdi ise CSS seçicilerini kullanarak grup ve hiyerarşik seçimler yapmayı görüyoruz. [cite: 356]</p>
-            </main>
+                <p>Bu alanda örnek içerik metinleri bulunmaktadır. CSS özellikleriyle bu metinler arasında <strong>boşluklar</strong> ve hizalamalar düzenlenebilir. [cite: 362]</p>
+                <p>Önce CSS ile kutuları yan yana getirmeyi öğrendik. Şimdi ise CSS seçicilerini kullanarak grup ve hiyerarşik seçimler yapmayı göreceğiz. [cite: 364]</p>
+            </section>
 
-            <aside class="sidebar-box">
+            <aside class="right-column">
                 <h2>Yan Menü / Bilgi</h2>
-                <p>Bu alan yan menü veya bilgi kısmıdır. CSS ile genişlik, yükseklik ve kenar boşlukları gibi özellikleri kullanarak düzenleyebiliriz. [cite: 356]</p>
-                <p>Öğrendiklerimizi hiyerarşik ve grup seçicilerle uygulayıp farklı bölümlere stil verebiliriz. [cite: 356]</p>
+                <p>Bu alan yan menü veya bilgi kısmıdır. CSS ile genişlik, yükseklik ve kenarlık özelliklerini kullanarak düzenleyebiliriz. [cite: 361]</p>
+                <p>Öğrendiklerimizi hiyerarşik ve grup seçicilerle uygulayıp stil verebiliriz. [cite: 364]</p>
             </aside>
-        </div>
+        </main>
 
-        <footer>
-            <p>&copy; 2026 CSS Temel Örnek. Bu sayfa basit bir HTML+CSS alıştırmasıdır. [cite: 356]</p>
+        <footer class="bottom-footer">
+            <p>© 2026 CSS Temel Örnek. Bu sayfa basit bir HTML+CSS alıştırmasıdır. [cite: 363]</p>
         </footer>
     </div>
-
 </body>
 </html>
