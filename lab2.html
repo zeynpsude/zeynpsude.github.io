@@ -2,41 +2,44 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>Zeynep - Lab 2 Çalışması</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <title>Lab 2</title>
+    <link rel="stylesheet" href="styles/lab2.css">
 </head>
 <body>
-    <header>
-        <img src="profil.jpg" alt="Zeynep Profil Resmi" class="profil-resmi">
-        <h1>Laboratuvar 2: Gelişmiş CSS ve Düzen</h1>
-    </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Ana Sayfa</a></li>
-            <li><a href="lab2.html">Lab 2</a></li>
-            <li><a href="about.html">Hakkımda</a></li>
-            <li><a href="contact.html">İletişim</a></li>
-        </ul>
-    </nav>
+    <div class="wrapper">
+        <header>
+            <div class="header-text">
+                <h1>CSS Temel Ödevi</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="about.html">Hakkımda</a></li>
+                    <li><a href="lab2.html" style="background:#94a3d8; color:white;">Lab 2</a></li>
+                    <li><a href="contact.html">İletişim</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <main class="container">
-        <section class="content">
-            <h2>Gelişmiş Web Tasarımı</h2>
-            <p>Bu sayfa, Web Programlama dersinin 2. haftasındaki CSS ve sayfa düzeni (layout) konularını pekiştirmek için hazırlanmıştır.</p>
-            <p>Burada Flexbox kullanarak iki sütunlu bir yapı oluşturduk ve linklere hover efektleri ekledik.</p>
-        </section>
+        <div class="main-container">
+            <main class="content-box">
+                <h2>İçerik</h2>
+                <p>Bu alanda örnek içerik metinleri bulunmaktadır. CSS özellikleriyle bu metinler arasında <strong>boşluklar</strong> (line-height) ve hizalamalar (text-align) düzenlenebilir. [cite: 356]</p>
+                <p>Önce CSS ile kutuları yan yana getirmeyi öğrendik. Şimdi ise CSS seçicilerini kullanarak grup ve hiyerarşik seçimler yapmayı görüyoruz. [cite: 356]</p>
+            </main>
 
-        <aside class="sidebar">
-            <h2>Hızlı Notlar</h2>
-            <p><strong>Yatay Menü:</strong> Liste öğelerini yan yana dizerek oluşturuldu.</p>
-            <p><strong>Hover:</strong> Fare ile üzerine gelindiğinde renk değişimi sağlar.</p>
-        </aside>
-    </main>
+            <aside class="sidebar-box">
+                <h2>Yan Menü / Bilgi</h2>
+                <p>Bu alan yan menü veya bilgi kısmıdır. CSS ile genişlik, yükseklik ve kenar boşlukları gibi özellikleri kullanarak düzenleyebiliriz. [cite: 356]</p>
+                <p>Öğrendiklerimizi hiyerarşik ve grup seçicilerle uygulayıp farklı bölümlere stil verebiliriz. [cite: 356]</p>
+            </aside>
+        </div>
 
-    <footer>
-        <p>&copy; 2026 Zeynep - Web Programlama Laboratuvar 2</p>
-        <p><a href="index.html">Ana Sayfaya Dön</a></p>
-    </footer>
+        <footer>
+            <p>&copy; 2026 CSS Temel Örnek. Bu sayfa basit bir HTML+CSS alıştırmasıdır. [cite: 356]</p>
+        </footer>
+    </div>
+
 </body>
 </html>
