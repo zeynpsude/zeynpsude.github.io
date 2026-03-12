@@ -19,7 +19,7 @@ body {
     overflow: hidden;
 }
 
-/* Header ve Navigasyon [cite: 3, 4, 5] */
+/* Header ve Navigasyon  */
 header {
     padding: 20px;
     border-bottom: 1px solid #dee2e6;
@@ -32,13 +32,13 @@ nav {
     margin-bottom: 20px;
 }
 
-/* Hiyerarşik Seçici 1 [cite: 3, 9] */
+/* Hiyerarşik Seçici 1 */
 nav ul li {
     display: inline-block;
     margin-left: 15px;
 }
 
-/* Hiyerarşik Seçici 2 [cite: 4, 9] */
+/* Hiyerarşik Seçici 2  */
 nav ul li a {
     text-decoration: none;
     color: #495057;
@@ -84,7 +84,7 @@ nav ul li a.active {
     margin-bottom: 15px;
 }
 
-/* Kutu Tasarımları [cite: 1] */
+/* Kutu Tasarımları  */
 .main-content {
     background-color: #fef3d7;
     border: 1px solid #f3d19c;
@@ -105,7 +105,7 @@ h2 {
     padding: 0 15px 15px 15px;
 }
 
-/* Footer [cite: 8] */
+/* Footer  */
 footer {
     text-align: center;
     padding: 15px;
@@ -113,4 +113,25 @@ footer {
     border-top: 1px solid #dee2e6;
     font-size: 13px;
     color: #6c757d;
+}
+/* Geri Dön Butonu Tasarımı */
+.back-button-container {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #8faadc; /* Ana sayfanın aktif menü rengiyle uyumlu */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #6c8dbd; /* Üzerine gelince biraz koyulaşır */
+    color: #fff;
 }
