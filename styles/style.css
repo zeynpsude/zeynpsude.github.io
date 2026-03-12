@@ -1,116 +1,17 @@
-/* Grup Seçici Kullanımı  */
-body, h2, p {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
+/* Resmin devasa görünmesini engellemek ve yuvarlak yapmak için */
+.profil-resmi {
+    width: 100px;           /* Genişlik 100 piksel */
+    height: 100px;          /* Yükseklik 100 piksel */
+    border-radius: 50%;     /* Tam yuvarlak yapar */
+    object-fit: cover;      /* Resmin basık görünmesini engeller */
+    display: inline-block;  /* Yanındaki yazıyla aynı hizada durmasını sağlar */
+    vertical-align: middle; /* Yazıyla dikeyde ortalar */
+    margin-right: 15px;     /* İsimle resim arasına boşluk bırakır */
+    border: 2px solid #ccc; /* İsteğe bağlı: Etrafına ince bir çerçeve ekler */
 }
 
-body {
-    background-color: #f0f2f5;
-    padding: 20px;
-}
-
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    background-color: #f8f9fa;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-/* Header ve Navigasyon [cite: 3, 4, 5] */
-header {
-    padding: 20px;
-    border-bottom: 1px solid #dee2e6;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-/* Hiyerarşik Seçici 1 [cite: 3, 9] */
-nav ul li {
+/* İsmin resmin yanında düzgün durması için */
+h1 {
     display: inline-block;
-    margin-left: 15px;
-}
-
-/* Hiyerarşik Seçici 2 [cite: 4, 9] */
-nav ul li a {
-    text-decoration: none;
-    color: #495057;
-    padding: 8px 12px;
-    transition: 0.3s; /* Hover efekti için yumuşatıcı */
-}
-
-nav ul li a:hover {
-    color: #000;
-    background-color: #e9ecef;
-    border-radius: 4px;
-}
-
-nav ul li a.active {
-    background-color: #8faadc;
-    color: white;
-    border-radius: 4px;
-}
-
-.header-text p {
-    line-height: 1.6;
-    color: #333;
-}
-
-/* İki Sütunlu Yapı (Display Mantığı)  */
-.content-wrapper {
-    display: flex;
-    padding: 20px;
-    gap: 20px;
-}
-
-.main-content, .sidebar {
-    flex: 1; /* Eşit genişlik  */
-    border-radius: 6px;
-}
-
-/* Metin Düzenlemeleri  */
-.inner-box p {
-    font-size: 14px;
-    color: #444;
-    line-height: 1.8;
-    text-align: left;
-    margin-bottom: 15px;
-}
-
-/* Kutu Tasarımları [cite: 1] */
-.main-content {
-    background-color: #d5cfbd;
-    border: 1px solid #f3d19c;
-}
-
-.sidebar {
-    background-color: #e6f2f7;
-    border: 1px solid #bcdbe7;
-}
-
-h2 {
-    padding: 15px;
-    font-size: 1.2rem;
-    color: #333;
-}
-
-.inner-box {
-    padding: 0 15px 15px 15px;
-}
-
-/* Footer [cite: 8] */
-footer {
-    text-align: center;
-    padding: 15px;
-    background-color: #f1f3f5;
-    border-top: 1px solid #dee2e6;
-    font-size: 13px;
-    color: #6c757d;
+    vertical-align: middle;
 }
