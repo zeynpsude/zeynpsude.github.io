@@ -44,28 +44,25 @@
         <p><a href="index.html">Ana sayfaya geri dön</a></p>
     </main>
 
-    <section>
-    <div class="contact-container">
-        <h2>Detaylı İletişim Formu</h2>
+<section>
+    <div class="contact-container"> <h2>Detaylı İletişim Formu</h2>
         <form action="#">
-            <label for="name">Ad Soyad:</label>
-            <input type="text" id="name" name="name" placeholder="Adınızı ve soyadınızı giriniz" required>
+            <label for="name">Ad Soyad:</label> <input type="text" id="name" name="name" placeholder="Örn: Asaf Karataş" required>
 
-            <label for="email">E-posta Adresi:</label>
-            <input type="email" id="email" name="email" placeholder="ornek@mail.com" required>
+            <label for="email">E-posta Adresi:</label> <input type="email" id="email" name="email" placeholder="ornek@mail.com" required>
 
-            <label for="subject">Konu:</label>
-            <select id="subject" name="subject">
+            <label for="subject">Konu:</label> <select id="subject" name="subject">
                 <option value="">Lütfen bir konu seçin...</option>
                 <option value="is-teklifi">İş Teklifi</option>
                 <option value="soru">Soru</option>
                 <option value="geri-bildirim">Geri Bildirim</option>
             </select>
 
-            <label for="message">Mesajınız:</label>
-            <textarea id="message" name="message" rows="5" placeholder="Mesajınızı buraya yazabilirsiniz..."></textarea>
+            <label for="message">Mesajınız:</label> <textarea id="message" name="message" rows="5" placeholder="Detaylı mesajınızı buraya yazabilirsiniz..."></textarea>
 
-            <button type="submit" class="submit-btn">Gönder</button>
+            <div class="button-group">
+                <button type="submit" class="submit-btn">Gönder</button> <button type="reset" class="reset-btn">Temizle</button>
+            </div>
         </form>
     </div>
 </section>
