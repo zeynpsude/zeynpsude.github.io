@@ -1,4 +1,4 @@
-/* --- Mevcut Stillerin --- */
+
 .profil-resmi {
     width: 100px;
     height: 100px;
@@ -15,52 +15,62 @@ h1 {
     vertical-align: middle;
 }
 
-/* --- Lab 3: İletişim Formu Tasarımı (Yeni Eklenenler) --- */
-
-/* 1. Formu kapsayan ana kutu [cite: 6, 14] */
+/* İletişim Formu Ana Konteyner */
 .contact-container {
-    width: 600px;           /* Gereksinim: Belirli genişlik  */
-    margin: 40px auto;      /* Gereksinim: Sayfayı ortalama  */
-    padding: 25px;          /* Gereksinim: İç boşluk (padding) [cite: 15] */
+    width: 600px;           /* Gereksinim: Belirli genişlik [cite: 14] */
+    margin: 50px auto;      /* Gereksinim: Sayfayı ortalama [cite: 14] */
+    padding: 30px;          /* Gereksinim: İç boşluk [cite: 15] */
     border: 1px solid #ccc; /* Gereksinim: Belirgin kenarlık [cite: 16] */
     border-radius: 10px;    /* Gereksinim: Köşe yuvarlama [cite: 16] */
-    background-color: #fdfdfd;
-    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
 }
 
-/* 2. Etiketler (Labels) [cite: 7] */
+/* Form Başlığı */
+.contact-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Etiketler (Labels) */
 .contact-container label {
-    display: block;
+    display: block;         /* Yazıların üstte kalmasını sağlar [cite: 7] */
     margin-bottom: 8px;
     font-weight: bold;
 }
 
-/* 3. Form Elemanları (Box Model Uygulaması) [cite: 17, 18, 19, 20] */
+/* Tüm Form Elemanları (Input, Select, Textarea) [cite: 17, 22] */
 .contact-container input, 
 .contact-container select, 
 .contact-container textarea {
-    width: 100%;            /* Gereksinim: Alanın tamamını kapla [cite: 18] */
-    padding: 10px;          /* Gereksinim: Yazıların ferah durması için [cite: 19] */
+    width: 100%;            /* Gereksinim: Tam genişlik [cite: 18] */
+    padding: 12px;          /* Gereksinim: İç ferahlık [cite: 19] */
     margin-bottom: 20px;    /* Gereksinim: Elemanlar arası boşluk [cite: 20] */
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing: border-box; /* Padding'in genişliği etkilememesi için */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Padding'in kutuyu taşırmasını engeller */
 }
 
-/* 4. Gönder Butonu Tasarımı [cite: 12, 21] */
+/* Buton Grubu */
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+/* Gönder ve Temizle Butonları [cite: 12, 21] */
+.submit-btn, .reset-btn {
+    flex: 1;
+    padding: 15px;          /* Gereksinim: Butonu büyütme [cite: 21] */
+    border: none;           /* Gereksinim: Kenarlığı kaldırma [cite: 21] */
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+}
+
 .submit-btn {
     background-color: #007bff; /* Gereksinim: Arka plan rengi [cite: 21] */
-    color: white;
-    padding: 12px 20px;        /* Gereksinim: Alt-üst ve sağ-sol padding [cite: 21] */
-    border: none;              /* Gereksinim: Kenarlığı kaldır [cite: 21] */
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    width: 100%;               /* Görseldeki gibi butonun büyümesi için */
-    transition: background 0.3s;
 }
 
-.submit-btn:hover {
-    background-color: #0056b3;
+.reset-btn {
+    background-color: #dc3545; /* Temizle butonu için kırmızı */
 }
