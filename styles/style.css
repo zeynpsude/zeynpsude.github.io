@@ -55,22 +55,17 @@ h1 {
     display: flex;
     gap: 10px;
 }
-
-/* Gönder ve Temizle Butonları [cite: 12, 21] */
-.submit-btn, .reset-btn {
-    flex: 1;
-    padding: 15px;          /* Gereksinim: Butonu büyütme [cite: 21] */
-    border: none;           /* Gereksinim: Kenarlığı kaldırma [cite: 21] */
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    color: white;
-}
-
+/* Gönder butonu (Mavi)  */
 .submit-btn {
-    background-color: #007bff; /* Gereksinim: Arka plan rengi [cite: 21] */
+    background-color: #007bff;
 }
 
+/* Temizle butonu (Kırmızı) */
 .reset-btn {
-    background-color: #dc3545; /* Temizle butonu için kırmızı */
+    background-color: #dc3545;
 }
+
+/* Üzerine gelince efekt */
+.submit-btn:hover { background-color: #0056b3; }
+.reset-btn:hover { background-color: #a71d2a; }
+
