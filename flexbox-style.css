@@ -77,6 +77,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 80%; /* Görseli %100 yerine %80 yaparak uzaklaştırır */
+    max-height: 80%;
+    object-fit: contain; /* Oranları korur */
+    border-radius: 5px;
 }
 
 /* Kartlar */
