@@ -82,6 +82,13 @@ body {
     object-fit: contain; /* Oranları korur */
     border-radius: 5px;
 }
+.hero-image img {
+  
+    width: 80%;       /* Resim kendi alanının %80'i kadar geniş olsun */
+    height: 80%;      /* Resim kendi alanının %80'i kadar yüksek olsun */
+    object-fit: contain; /* Resmin oranlarını koru ve kutunun içine sığdır */
+    border-radius: 5px;  /* Resmin kenarlarını da yuvarla */
+}
 
 /* Kartlar */
 .cards-section {
