@@ -70,24 +70,21 @@ body {
 }
 
 .hero-image {
-    flex: 1;                 /* Sağ tarafın genişliğini belirler */
-    background: #eee;        /* Arka plan rengi kalsın */
+    width: 250px;           /* Sabit bir genişlik (kare olması için) */
+    height: 250px;          /* Sabit bir yükseklik */
+    background: #eee;
     margin-left: 20px;
-    border-radius: 8px;
-    display: flex;           /* İçindeki resmi ortalamak için */
-    justify-content: center; 
-    align-items: center;     
-    overflow: hidden;        /* Resim taşarsa keser */
-    padding: 20px;           /* İŞTE UZAKLAŞTIRMA SIRRI: Bu boşluk resmi içeri iter */
+    border-radius: 15px;    /* Biraz daha yumuşak köşeler */
+    overflow: hidden;       /* Köşelerden taşan resmi gizle */
+    display: flex;
+    align-self: center;     /* Hero alanı içinde dikeyde ortalar */
 }
 
 .hero-image img {
-    width: 100%;             /* Kutunun genişliğine uyum sağla */
-    height: 100%;            /* Kutunun yüksekliğine uyum sağla */
-    object-fit: contain;     /* RESMİ UZAKLAŞTIRAN ASIL KOMUT: Resmi kesmeden kutuya sığdırır */
-    border-radius: 5px;
-    /* İstersen yüzü odaklamak için şunu da ekleyebilirsin: */
-    /* object-position: center; */ 
+    width: 100%;            /* Kutunun genişliğini tam doldur */
+    height: 100%;           /* Kutunun yüksekliğini tam doldur */
+    object-fit: cover;      /* İŞTE BU: Resmi bozmadan kutuya tam oturtur */
+    object-position: center top; /* Yüzün kesilmemesi için odağı yukarı çeker */
 }
 
 /* Kartlar */
