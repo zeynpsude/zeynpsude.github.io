@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Uygulama</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="section-container">
+            <nav class="navbar">
+                <div class="logo">LOGO</div>
+                <ul class="nav-links">
+                    <li>Ana Sayfa</li>
+                    <li>Hakkında</li>
+                    <li>Dersler</li>
+                    <li>İletişim</li>
+                </ul>
+            </nav>
+            <div class="labels-bar">
+                <span>flex layout</span><span>justify-content</span><span>flex layout</span><span>10vh height</span><span>100vw height</span><span>100vw width</span>
+            </div>
+        </div>
+
+        <div class="section-container">
+            <section class="hero">
+                <div class="hero-content">
+                    <h1>Zeynep Sude Can</h1>
+                    <p>Bilgisayar Mühendisliği Öğrencisi</p>
+                    <div class="line-placeholder"></div>
+                    <div class="line-placeholder short"></div>
+                    <button class="btn blue">Buton</button>
+                </div>
+                <div class="hero-image">
+                    <img src="profil.jpg" alt="profil Görseli">
+                    <div class="image-icon"></div>
+                </div>
+            </section>
+            <div class="labels-bar">
+                <span>flex-direction: row</span><span>height: 30vh</span><span>align-items: stretch</span>
+            </div>
+        </div>
+
+       <div class="section-container">
+    <div class="section-header">
+        <h2>Projelerim & Çalışmalarım</h2>
+        <div class="header-labels"><span>multiple items</span><span>flex layout - wrap</span></div>
+    </div>
+    <section class="cards-section">
+        <div class="card">
+            <h3>Otel Rezervasyon</h3>
+            <p>Database ve Yazılım Mühendisliği dersi için geliştirilen sistem. </p>
+            <div class="line-placeholder"></div>
+            <button class="btn blue">Detay</button>
+        </div>
+        <div class="card">
+            <h3>Teknofest 2026</h3>
+            <p>İnsanlık Yararına Teknoloji kategorisinde uygulama projesi. </p>
+            <div class="line-placeholder"></div>
+            <button class="btn blue">Detay</button>
+        </div>
+        <div class="card">
+            <h3>LGS Matematik</h3>
+            <p>8. sınıf öğrencisi için hazırladığım özel çalışma programı. </p>
+            <div class="line-placeholder"></div>
+            <button class="btn blue">Detay</button>
+        </div>
+        <div class="card">
+            <h3>Web Programlama</h3>
+            <p>HTML ve CSS kullanarak hazırladığım kişisel portfolyo sitem. </p>
+            <div class="line-placeholder"></div>
+            <button class="btn blue">Detay</button>
+        </div>
+    </section>
+    <div class="labels-bar">
+        <span>flex-direction</span><span>flex layout + wrap</span><span>gap + align/hizalama</span><span>height: 30vh</span>
+    </div>
+</div>
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Flex Grow Uygulama</h2>
+                <div class="header-labels"><span>flex-grow:</span><span>height: 20vh</span><span>stretch (esneme)</span></div>
+            </div>
+            <section class="grow-section">
+                <div class="box box1">
+                    <h4>1 Kutu</h4>
+                    <p>flex-grow: 1;</p>
+                    <button class="btn blue">Buton</button>
+                </div>
+                <div class="box box2">
+                    <h4>2 Kutu</h4>
+                    <p>flex-grow: 2;</p>
+                    <button class="btn green">Buton</button>
+                </div>
+                <div class="box box3">
+                    <h4>3 Kutu</h4>
+                    <p>flex-grow: 1;</p>
+                    <button class="btn orange">Buton</button>
+                </div>
+            </section>
+            <div class="labels-bar">
+                <span>multiple items</span><span>flex layout + wrap</span><span>gap + align/hizalama</span>
+            </div>
+        </div>
+
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Flex Grow Uygulama</h2>
+                <div class="header-labels"><span>flex-grow:</span><span>height: 20vh</span><span>stretch (esneme)</span></div>
+            </div>
+            <section class="grow-section">
+                <div class="box box1">
+                    <h4>1 Kutu</h4>
+                    <p>flex-grow: 1;</p>
+                </div>
+                <div class="box box2">
+                    <h4>2 Kutu</h4>
+                    <p>flex-grow: 2;</p>
+                </div>
+                <div class="box box3">
+                    <h4>3 Kutu</h4>
+                    <p>flex-grow: 1;</p>
+                </div>
+            </section>
+            <div class="labels-bar">
+                <span>flex-grow</span><span>height: 20vh</span><span>stretch (esneme)</span>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>© 2026 - Temel Flexbox Örneği</p>
+        </footer>
