@@ -51,6 +51,11 @@ body {
     gap: 15px;
     font-size: 0.9rem;
 }
+.nav-links a {
+    text-decoration: none; /* Alt çizgiyi kaldırır */
+    color: inherit;       /* Üst menüdeki siyah rengi korur */
+    cursor: pointer;      /* Üzerine gelince el işareti çıkar */
+}
 
 /* Hero */
 .hero {
