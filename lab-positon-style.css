@@ -1,0 +1,118 @@
+/* Genel Ayarlar */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    min-height: 150vh; /* Scroll oluşması için (fixed öğeyi görmek adına) */
+    margin: 0;
+    padding: 20px;
+}
+
+header, footer {
+    text-align: center;
+    padding: 20px;
+}
+
+/* --- ANA KART YAPISI --- */
+.card-container {
+    position: relative; /* Zorunlu Kural: Kapsayıcı [cite: 10, 37] */
+    width: 400px;
+    margin: 50px auto;
+    padding: 40px 20px;
+    background-color: #e0dcfc;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    overflow: visible; /* Absolute öğelerin taşabilmesi için */
+}
+
+/* --- ABSOLUTE ÖĞELER [cite: 11, 38] --- */
+.badge {
+    position: absolute;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: help; /* Etkileşimli Cursor 1 [cite: 13, 40] */
+}
+
+.badge-top-left {
+    top: -10px;
+    left: 10px;
+    background-color: #fff9c4;
+    z-index: 2; /* Üstte görünmesi için [cite: 18, 42] */
+}
+
+.badge-top-right {
+    top: 10px;
+    right: 10px;
+    background-color: #c8e6c9;
+}
+
+.location-box {
+    position: absolute;
+    bottom: 60px;
+    right: -20px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 3; /* Kart içeriğinin üzerine biner [cite: 18] */
+    transition: transform 0.3s ease; /* Etkileşim 1: Transition [cite: 14, 41] */
+    cursor: crosshair; /* Etkileşimli Cursor 2 */
+}
+
+.location-box:hover {
+    transform: scale(1.1); /* Hover animasyonu */
+}
+
+.register-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #ffccbc;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer; /* Etkileşimli Cursor 3 */
+    animation: pulse 2s infinite; /* Etkileşim 2: Keyframes Animasyon [cite: 17, 41] */
+}
+
+/* --- FIXED ÖĞE [cite: 12, 39] --- */
+.fixed-helper {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #5c6bc0;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.fixed-helper .tooltip {
+    display: none;
+    position: absolute;
+    right: 60px;
+    background: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+.fixed-helper:hover .tooltip {
+    display: block;
+}
+
+/* --- ANİMASYONLAR --- */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); background-color: #ffab91; }
+    100% { transform: scale(1); }
+}
+
+.back-link:active {
+    color: red; /* :active efekti [cite: 16] */
+}
