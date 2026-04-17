@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birim Dönüştürücü - Hafta 6-2</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            padding-top: 50px;
+            background-color: #f4f7f6;
+        }
+
+        .container {
+            width: 400px;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #666;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            color: #000;
+        }
+
+        h2 {
+            margin-top: 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .result-area {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #d4edda;
+            color: #155724;
+            text-align: center;
+            border-radius: 5px;
+            font-weight: bold;
+            display: none; /* Başlangıçta gizli */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="index.html" class="back-link">&larr; Anasayfaya Dön</a>
+        
+        <h2>Birim Dönüştürücü</h2>
+        
+        <div class="form-group">
+            <label>Değer Giriniz:</label>
+            <input type="number" id="inputValue" placeholder="Örn: 50">
+        </div>
+
+        <div class="form-group">
+            <label>Dönüşüm Tipi:</label>
+            <select id="conversionType">
+                <option value="m-km">Metre -> Kilometre</option>
+                <option value="c-f">Celsius -> Fahrenheit</option>
+                <option value="kg-gr">Kilogram -> Gram</option>
+            </select>
+        </div>
+
+        <button onclick="donustur()">Hesapla</button>
+
+        <div id="resultBox" class="result-area">
+            Sonuç: <span id="resultValue"></span>
+        </div>
+    </div>
+
+    <script src="hafta6-2.js"></script>
+</body>
+</html>
