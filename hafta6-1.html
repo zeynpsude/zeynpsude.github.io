@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Öğrenci Not Hesaplama - Hafta 6</title>
+    <style>
+        /* CSS Kısmı */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            padding-top: 50px;
+            background-color: #ffffff;
+        }
+
+        .container {
+            width: 450px;
+        }
+
+        h2 {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #999;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #eeeeee;
+            border: 1px solid #999;
+            cursor: pointer;
+            font-size: 14px;
+            color: #333;
+        }
+
+        button:hover {
+            background-color: #e0e0e0;
+        }
+
+        .result-box {
+            margin-top: 25px;
+            padding: 20px;
+            background-color: #f1f1f1;
+            min-height: 120px;
+        }
+
+        .result-box h3 {
+            margin: 0 0 15px 0;
+            font-size: 18px;
+        }
+
+        .result-box p {
+            margin: 4px 0;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Öğrenci Not Hesaplama</h2>
+        
+        <div class="form-container">
+            <input type="text" id="adSoyad" placeholder="Ad Soyad">
+            <input type="text" id="vizeNotu" placeholder="Vize Notu">
+            <input type="text" id="finalNotu" placeholder="Final Notu">
+            <button onclick="hesapla()">Hesapla</button>
+        </div>
+
+        <div id="sonucAlani" class="result-box" style="display: none;">
+            <h3 id="displayAd"></h3>
+            <p>Ortalama: <span id="displayOrt"></span></p>
+            <p>Harf Notu: <span id="displayHarf"></span></p>
+            <p>Durum: <span id="displayDurum"></span></p>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript Kısmı
+        function hesapla() {
+            const ad = document.getElementById("adSoyad").value;
+            const vize = parseFloat(document.getElementById("vizeNotu").value);
+            const final = parseFloat(document.getElementById("finalNotu").value);
+
+            if (ad === "" || isNaN(vize) || isNaN(final)) {
+                alert("Lütfen tüm alanları doldurun.");
+                return;
+            }
+
+            // Hesaplama: Vize %40, Final %60
+            const ortalama = (vize * 0.4) + (final * 0.6);
+            
+            // Durum Belirleme: 50 ve üzeri Geçti
+            const durum = ortalama >= 50 ? "Geçti" : "Kaldı";
+
+            // Harf Notu Belirleme (Örnekteki 60 ortalama = CB baz alınmıştır)
+            let harf = "";
+            if (ortalama >= 90) harf = "AA";
+            else if (ortalama >= 80) harf = "BA";
+            else if (ortalama >= 70) harf = "BB";
+            else if (ortalama >= 60) harf = "CB";
+            else if (ortalama >= 50) harf = "CC";
+            else if (ortalama >= 40) harf = "DC";
+            else harf = "FF";
+
+            // Sonuçları ekrana basma
+            document.getElementById("displayAd").innerText = ad;
+            document.getElementById("displayOrt").innerText = ortalama.toFixed(2);
+            document.getElementById("displayHarf").innerText = harf;
+            document.getElementById("displayDurum").innerText = durum;
+
+            // Sonuç kutusunu göster
+            document.getElementById("sonucAlani").style.display = "block";
+        }
+    </script>
+</body>
+</html>
