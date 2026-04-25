@@ -1,71 +1,174 @@
+/* Zeynep Sude Can - Uyumlu Mavi Geçişli Tema */
+:root {
+    /* Renk Paleti */
+    --side-bg: #1e293b;            /* Derin Gece Mavisi (Sidebar) */
+    --main-bg: #f0f9ff;            /* Ferah Gök Mavisi (Ana Blok) */
+    --accent-blue: #0ea5e9;        /* Canlı Vurgu Mavisi */
+    --text-dark: #0f172a;          /* Ana metin için koyu lacivert */
+    --text-light: #f1f5f9;         /* Sidebar metinleri için açık renk */
+    --card-white: #ffffff;         /* Beyaz kartlar */
+    --border-blue: #e0f2fe;        /* Hafif mavi kenarlıklar */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--main-bg); /* Genel arka plan ferah */
+    color: var(--text-dark);
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* --- SOL BLOK: Sidebar --- */
+.sidebar {
+    width: 300px;
+    background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%); /* Sidebar içi dikey geçiş */
+    padding: 2.5rem 1.5rem;
+    position: fixed;
+    height: 100vh;
+    color: var(--text-light);
+    box-shadow: 10px 0 30px rgba(0,0,0,0.1);
+    z-index: 10;
+}
+
+.profile-section {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
 
 .profil-resmi {
-    width: 100px;
-    height: 100px;
+    width: 110px;
+    height: 110px;
     border-radius: 50%;
     object-fit: cover;
+    border: 3px solid var(--accent-blue);
+    margin-bottom: 1rem;
+    box-shadow: 0 0 15px rgba(14, 165, 233, 0.3);
+}
+
+.status-badge {
     display: inline-block;
-    vertical-align: middle;
-    margin-right: 15px;
-    border: 2px solid #ccc;
+    font-size: 0.75rem;
+    background: rgba(14, 165, 233, 0.2);
+    color: var(--accent-blue);
+    padding: 5px 15px;
+    border-radius: 30px;
+    font-weight: 600;
 }
 
-h1 {
-    display: inline-block;
-    vertical-align: middle;
+.nav-links {
+    list-style: none;
+    margin-top: 2rem;
 }
 
-/* İletişim Formu Ana Konteyner */
-.contact-container {
-    width: 600px;           /* Gereksinim: Belirli genişlik [cite: 14] */
-    margin: 50px auto;      /* Gereksinim: Sayfayı ortalama [cite: 14] */
-    padding: 30px;          /* Gereksinim: İç boşluk [cite: 15] */
-    border: 1px solid #ccc; /* Gereksinim: Belirgin kenarlık [cite: 16] */
-    border-radius: 10px;    /* Gereksinim: Köşe yuvarlama [cite: 16] */
-    background-color: #f9f9f9;
-}
-
-/* Form Başlığı */
-.contact-container h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-/* Etiketler (Labels) */
-.contact-container label {
-    display: block;         /* Yazıların üstte kalmasını sağlar [cite: 7] */
+.nav-links a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8); 
+    display: block;
+    padding: 12px 18px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
     margin-bottom: 8px;
-    font-weight: bold;
+    font-weight: 500;
 }
 
-/* Tüm Form Elemanları (Input, Select, Textarea) [cite: 17, 22] */
-.contact-container input, 
-.contact-container select, 
-.contact-container textarea {
-    width: 100%;            /* Gereksinim: Tam genişlik [cite: 18] */
-    padding: 12px;          /* Gereksinim: İç ferahlık [cite: 19] */
-    margin-bottom: 20px;    /* Gereksinim: Elemanlar arası boşluk [cite: 20] */
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box; /* Padding'in kutuyu taşırmasını engeller */
+.nav-links a:hover, .nav-links a.active {
+    background: var(--accent-blue);
+    color: white;
+    transform: translateX(5px);
 }
 
-/* Buton Grubu */
-.button-group {
+.divider {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: rgba(241, 245, 249, 0.4);
+    letter-spacing: 1.5px;
+    margin: 2rem 0 0.8rem 10px;
+    font-weight: 700;
+}
+
+/* --- SAĞ BLOK: Ana İçerik --- */
+.content {
+    margin-left: 300px; /* Sidebar genişliği kadar boşluk */
+    padding: 5rem;
+    flex-grow: 1;
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); /* Ana blok içi yumuşak mavi geçiş */
+}
+
+.welcome-header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.5rem;
+    color: #1e293b;
+    margin-bottom: 1rem;
+    letter-spacing: -1px;
+}
+
+.welcome-header p {
+    font-size: 1.2rem;
+    color: #64748b;
+    max-width: 700px;
+}
+
+/* Kartlar - Beyaz ve Temiz */
+.card {
+    margin-top: 4rem;
+    background: var(--card-white);
+    padding: 3rem;
+    border-radius: 30px;
+    box-shadow: 0 20px 50px rgba(30, 41, 59, 0.05); /* Çok hafif gölge */
+    border: 1px solid var(--border-blue);
+}
+
+.card h2 {
+    color: #1e293b;
+    margin-bottom: 2rem;
     display: flex;
+    align-items: center;
     gap: 10px;
 }
-/* Gönder butonu (Mavi)  */
-.submit-btn {
-    background-color: #007bff;
+
+.goal-item {
+    display: flex;
+    align-items: center;
+    background: #f8fafc;
+    padding: 1.5rem;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    transition: 0.3s;
 }
 
-/* Temizle butonu (Kırmızı) */
-.reset-btn {
-    background-color: #dc3545;
+.goal-item:hover {
+    border-color: var(--accent-blue);
+    background: white;
+    box-shadow: 0 10px 20px rgba(14, 165, 233, 0.1);
 }
 
-/* Üzerine gelince efekt */
-.submit-btn:hover { background-color: #0056b3; }
-.reset-btn:hover { background-color: #a71d2a; }
+.goal-number {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--accent-blue);
+    margin-right: 1.5rem;
+}
 
+.main-footer {
+    margin-top: 5rem;
+    text-align: center;
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+/* Mobil Uyumluluk */
+@media (max-width: 900px) {
+    .container { flex-direction: column; }
+    .sidebar { width: 100%; height: auto; position: relative; border-right: none; }
+    .content { margin-left: 0; padding: 2rem; }
+}
