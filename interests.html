@@ -2,71 +2,93 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>Zeynep - İlgi Alanlarım🫧</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İlgi Alanlarım | Zeynep Sude Can</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <header>
-        <h1>İlgi Alanlarım</h1>
-        <p>Teknoloji ve kişisel ilgi alanlarım</p>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="index.html">Ana Sayfa</a></li>
-            <li><a href="about.html">Hakkımda</a></li>
-            <li><a href="interests.html">İlgi Alanlarım</a></li>
-            <li><a href="contact.html">İletişim</a></li>
-        </ul>
-    </nav>
-
-    <main>
-        <section>
-            <h2>Teknoloji Alanındaki İlgi Alanlarım</h2>
-            <ul>
-                <li>Web geliştirme </li>
-                <li>Yapay zeka uygulamaları </li>
-                <li>Mobil uygulama geliştirme </li>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="profile-section">
+                <img src="profil.jpg" alt="Zeynep Profil Resmi" class="profil-resmi">
+                <h3>Zeynep Sude Can</h3>
+                <span class="status-badge">Bilgisayar Mühendisliği</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="about.html">Hakkımda</a></li>
+                <li><a href="interests.html" class="active">İlgi Alanlarım</a></li>
+                <li><a href="contact.html">İletişim</a></li>
+                <li class="divider">Laboratuvar & Ödevler</li>
+                <li><a href="lab2.html">CSS Ödevi</a></li>
+                <li><a href="flexbox-uygulama.html">Flexbox Uygulaması</a></li>
+                <li><a href="lab-position.html">Duyuru Kartı</a></li>
+                <li><a href="hafta6-1.html" target="_blank">Hafta 6-1</a></li>
+                <li><a href="hafta6-2.html">Hafta 6-2</a></li>
+                <li><a href="hafta7.html">Hafta 7 Ödevi</a></li>
             </ul>
-        </section>
+        </nav>
 
-        <section>
-            <h2>Öğrenmek İstediğim Teknolojiler</h2>
-            <ul>
-                <li>React </li>
-                <li>ASP.NET Core </li>
-                <li>Flutter </li>
-            </ul>
-        </section>
+        <main class="content">
+            <header class="welcome-header">
+                <h1>İlgi Alanlarım 🫧</h1>
+                <p>Teknoloji dünyasındaki merakım ve kendimi geliştirme yolculuğumdaki odak noktalarım.</p>
+            </header>
 
-        <section>
-            <h2>Günlük Çalışma Rutinim</h2>
-            <ol>
-                <li>Ders materyallerini gözden geçirmek </li>
-                <li>Kodlama pratiği yapmak </li>
-                <li>Yeni teknolojiler araştırmak </li>
-                <li>Proje geliştirmek </li>
-            </ol>
-        </section>
-
-        <section>
-            <h2>Web Teknolojileri Sözlüğü</h2>
-            <dl>
-                <dt><strong>HTML</strong></dt>
-                <dd>Web sayfalarının iskeletini oluşturan işaretleme dilidir. </dd>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
                 
-                <dt><strong>CSS</strong></dt>
-                <dd>Web sayfalarının görsel tasarımını düzenlemek için kullanılır. </dd>
-                
-                <dt><strong>JavaScript</strong></dt>
-                <dd>Web sayfalarına etkileşim kazandıran programlama dilidir. </dd>
-            </dl>
-        </section>
+                <section class="card">
+                    <h2>🚀 Teknoloji Odağım</h2>
+                    <div class="goal-list">
+                        <div class="goal-item"><span class="goal-number">→</span> Web Geliştirme</div>
+                        <div class="goal-item"><span class="goal-number">→</span> Yapay Zeka Uygulamaları</div>
+                        <div class="goal-item"><span class="goal-number">→</span> Mobil Uygulama Geliştirme</div>
+                    </div>
+                </section>
 
-        <p><a href="index.html">Ana sayfaya geri dön</a></p>
-    </main>
+                <section class="card">
+                    <h2>📚 Öğrenme Listem</h2>
+                    <div class="goal-list">
+                        <div class="goal-item" style="border-left: 3px solid var(--accent-blue);">React</div>
+                        <div class="goal-item" style="border-left: 3px solid var(--accent-blue);">ASP.NET Core</div>
+                        <div class="goal-item" style="border-left: 3px solid var(--accent-blue);">Flutter</div>
+                    </div>
+                </section>
+            </div>
 
-    <footer>
-        <p>&copy; 2026 Zeynep - Web Programlama Dersi </p>
-    </footer>
+            <section class="card" style="margin-top: 25px;">
+                <h2>⏰ Günlük Çalışma Rutinim</h2>
+                <div class="goal-list" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                    <div class="goal-item"><strong>1.</strong> Ders Tekrarı</div>
+                    <div class="goal-item"><strong>2.</strong> Kodlama Pratiği</div>
+                    <div class="goal-item"><strong>3.</strong> Yeni Araştırmalar</div>
+                    <div class="goal-item"><strong>4.</strong> Proje Geliştirme</div>
+                </div>
+            </section>
+
+            <section class="card" style="margin-top: 25px;">
+                <h2>📖 Web Teknolojileri Sözlüğü</h2>
+                <dl style="display: grid; gap: 20px; margin-top: 10px;">
+                    <div>
+                        <dt style="color: var(--accent-blue); font-weight: 700; font-size: 1.1rem;">HTML</dt>
+                        <dd style="color: #64748b; margin-top: 5px;">Web sayfalarının iskeletini oluşturan işaretleme dilidir.</dd>
+                    </div>
+                    <div>
+                        <dt style="color: var(--accent-blue); font-weight: 700; font-size: 1.1rem;">CSS</dt>
+                        <dd style="color: #64748b; margin-top: 5px;">Web sayfalarının görsel tasarımını düzenlemek için kullanılır.</dd>
+                    </div>
+                    <div>
+                        <dt style="color: var(--accent-blue); font-weight: 700; font-size: 1.1rem;">JavaScript</dt>
+                        <dd style="color: #64748b; margin-top: 5px;">Web sayfalarına etkileşim kazandıran programlama dilidir.</dd>
+                    </div>
+                </dl>
+            </section>
+
+            <footer class="main-footer">
+                <p>&copy; 2026 Zeynep Sude Can - Web Programlama Dersi</p>
+            </footer>
+        </main>
+    </div>
 </body>
 </html>
