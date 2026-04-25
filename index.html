@@ -2,52 +2,62 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>Zeynep - Ana Sayfa</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeynep Sude Can | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <img src="profil.jpg" alt="Zeynep Profil Resmi" class="profil-resmi">
-        <h1>Zeynep Sude Can</h1>
-        <p>Bilgisayar Mühendisliği Öğrencisi</p>
-    </header>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="profile-section">
+                <img src="profil.jpg" alt="Zeynep Profil Resmi" class="profil-resmi">
+                <h3>Zeynep Sude Can</h3>
+                <span class="status-badge">Bilgisayar Mühendisliği</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Ana Sayfa</a></li>
+                <li><a href="about.html">Hakkımda</a></li>
+                <li><a href="interests.html">İlgi Alanlarım</a></li>
+                <li><a href="contact.html">İletişim</a></li>
+                <li class="divider">Laboratuvar & Ödevler</li>
+                <li><a href="lab2.html">CSS Ödevi</a></li>
+                <li><a href="flexbox-uygulama.html">Flexbox Uygulaması</a></li>
+                <li><a href="lab-position.html">Duyuru Kartı</a></li>
+                <li><a href="hafta6-1.html" target="_blank">Hafta 6-1</a></li>
+                <li><a href="hafta6-2.html">Hafta 6-2</a></li>
+                <li><a href="hafta7.html">Hafta 7 Ödevi</a></li>
+            </ul>
+        </nav>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Ana Sayfa</a></li>
-            <li><a href="about.html">Hakkımda</a></li>
-            <li><a href="interests.html">İlgi Alanlarım</a></li>
-            <li><a href="contact.html">İletişim</a></li>
-            <li><a href="lab2.html">CSS Ödevi (Lab 2)</a></li>
-            <li><a href="flexbox-uygulama.html" class="nav-btn">Flexbox Uygulama</a></li>
-            <li><a href="lab-position.html" class="nav-btn">Etkileşimli Duyuru Kartı (Lab 5)</a></li>
-            <li><a href="hafta6-1.html" target="_blank">Hafta 6-1 Uygulaması</a></li>
-            <li><a href="hafta6-2.html">Hafta 6-2 Uygulaması </a></li>
-            <li class="nav-item"> <a class="nav-link" href="hafta7.html">Hafta 7 Ödevi</a> </li>
-        </ul>
-    </nav>
+        <main class="content">
+            <header class="welcome-header">
+                <h1>Hoş Geldiniz 👋</h1>
+                <p>Web Programlama dersi kapsamında hazırladığım kişisel dijital alanıma hoş geldiniz. Burada akademik yolculuğumu ve projelerimi keşfedebilirsiniz.</p>
+            </header>
 
-    <main>
-        <section>
-            <h2>Hoş Geldiniz</h2>
-            <p>Bu web sitesi, Web Programlama dersi kapsamında hazırladığım kişisel tanıtım sayfamdır. Burada projelerim ve hedeflerim hakkında bilgi bulabilirsiniz.</p>
-        </section>
+            <section id="hedefler" class="card">
+                <h2><span class="icon">🎯</span> Öğrenme Hedeflerim</h2>
+                <div class="goal-list">
+                    <div class="goal-item">
+                        <span class="goal-number">01</span>
+                        <p>HTML ve CSS temellerini modern tasarım trendleriyle pekiştirmek.</p>
+                    </div>
+                    <div class="goal-item">
+                        <span class="goal-number">02</span>
+                        <p>Yapay zeka projelerimi etkileşimli web arayüzleri üzerinde sergilemek.</p>
+                    </div>
+                    <div class="goal-item">
+                        <span class="goal-number">03</span>
+                        <p>ASP.NET Core ile ölçeklenebilir ve dinamik web mimarileri kurmak.</p>
+                    </div>
+                </div>
+            </section>
 
-        <section id="hedefler">
-            <h2>Öğrenme Hedeflerim</h2>
-            <ol>
-                <li>HTML ve CSS temellerini pekiştirmek </li>
-                <li>Yapay zeka projelerimi web üzerinde sergilemek </li>
-                <li>ASP.NET Core ile dinamik yapılar kurmak </li>
-            </ol>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Zeynep - Web Programlama Dersi </p>
-    </footer>
+            <footer class="main-footer">
+                <p>&copy; 2026 Zeynep Sude Can - Web Programlama Dersi</p>
+            </footer>
+        </main>
+    </div>
 </body>
 </html>
-
-
-
