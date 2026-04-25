@@ -2,74 +2,140 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>Zeynep - İletişim📞</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim | Zeynep Sude Can</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
+    <style>
+        /* Form elemanları için hızlı eklemeler */
+        form { display: grid; gap: 15px; }
+        label { font-weight: 600; font-size: 0.9rem; color: var(--text-dark); }
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border-blue);
+            border-radius: 10px;
+            font-family: inherit;
+            background: #f8fafc;
+            transition: 0.3s;
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+        }
+        .button-group { display: flex; gap: 10px; margin-top: 10px; }
+        .submit-btn {
+            background: var(--accent-blue);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .submit-btn:hover { opacity: 0.9; transform: translateY(-2px); }
+        .reset-btn {
+            background: transparent;
+            color: #64748b;
+            border: 1px solid #cbd5e1;
+            padding: 12px 25px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>İletişim</h1>
-        <p>Benimle iletişime geçebileceğiniz bilgiler</p>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="index.html">Ana Sayfa</a></li>
-            <li><a href="about.html">Hakkımda</a></li>
-            <li><a href="interests.html">İlgi Alanlarım</a></li>
-            <li><a href="contact.html">İletişim</a></li>
-        </ul>
-    </nav>
-
-    <main>
-        <section>
-            <h2>İletişim Bilgilerim</h2>
-            <ul>
-                <li><strong>E-posta:</strong> zeynep.sude491@gmail.com</li>
-                <li><strong>GitHub:</strong> <a href="https://github.com/zeynpsude">GitHub Profilim</a></li>
-                <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/zeynepsudecan">LinkedIn Profilim</a></li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Sık Sorulan Sorular</h2>
-            <dl>
-                <dt><strong>Mesajlara ne kadar sürede dönüş yapıyorsunuz?</strong></dt>
-                <dd>Genellikle 24 saat içinde e-posta yoluyla dönüş yapıyorum.</dd>
-                
-                <dt><strong>Projelerde iş birliğine açık mısınız?</strong></dt>
-                <dd>Evet, özellikle eğitim ve açık kaynak projelerinde iş birliklerine açığım.</dd>
-            </dl>
-        </section>
-
-        <p><a href="index.html">Ana sayfaya geri dön</a></p>
-    </main>
-
-<section>
-    <div class="contact-container"> <h2>Detaylı İletişim Formu</h2>
-        <form action="#">
-            <label for="name">Ad Soyad:</label> <input type="text" id="name" name="name" placeholder="Örn: Zeynep Sude Can" required>
-
-            <label for="email">E-posta Adresi:</label> <input type="email" id="email" name="email" placeholder="ornek@mail.com" required>
-
-            <label for="subject">Konu:</label> <select id="subject" name="subject">
-                <option value="">Lütfen bir konu seçin...</option>
-                <option value="is-teklifi">İş Teklifi</option>
-                <option value="soru">Soru</option>
-                <option value="geri-bildirim">Geri Bildirim</option>
-            </select>
-
-            <label for="message">Mesajınız:</label> <textarea id="message" name="message" rows="5" placeholder="Detaylı mesajınızı buraya yazabilirsiniz..."></textarea>
-
-            <div class="button-group">
-                <button type="submit" class="submit-btn">Gönder</button>
-                <button type="reset" class="reset-btn">Temizle</button>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="profile-section">
+                <img src="profil.jpg" alt="Zeynep Profil Resmi" class="profil-resmi">
+                <h3>Zeynep Sude Can</h3>
+                <span class="status-badge">Bilgisayar Mühendisliği</span>
             </div>
-        </form>
-    </div>
-</section>
+            <ul class="nav-links">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="about.html">Hakkımda</a></li>
+                <li><a href="interests.html">İlgi Alanlarım</a></li>
+                <li><a href="contact.html" class="active">İletişim</a></li>
+                <li class="divider">Laboratuvar & Ödevler</li>
+                <li><a href="lab2.html">CSS Ödevi</a></li>
+                <li><a href="flexbox-uygulama.html">Flexbox Uygulaması</a></li>
+                <li><a href="lab-position.html">Duyuru Kartı</a></li>
+                <li><a href="hafta6-1.html" target="_blank">Hafta 6-1</a></li>
+                <li><a href="hafta6-2.html">Hafta 6-2</a></li>
+                <li><a href="hafta7.html">Hafta 7 Ödevi</a></li>
+            </ul>
+        </nav>
 
-    <footer>
-        <p>&copy; 2026 Zeynep - Web Programlama Dersi</p>
-    </footer>
+        <main class="content">
+            <header class="welcome-header">
+                <h1>İletişim 📞</h1>
+                <p>Yeni projeler, iş birliği veya sadece merhaba demek için bana ulaşabilirsiniz.</p>
+            </header>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 25px;">
+                
+                <section class="card" style="margin-top: 0;">
+                    <h2>Detaylı İletişim Formu</h2>
+                    <form action="#">
+                        <div>
+                            <label for="name">Ad Soyad</label>
+                            <input type="text" id="name" name="name" placeholder="Zeynep Sude Can" required>
+                        </div>
+                        <div>
+                            <label for="email">E-posta Adresi</label>
+                            <input type="email" id="email" name="email" placeholder="ornek@mail.com" required>
+                        </div>
+                        <div>
+                            <label for="subject">Konu</label>
+                            <select id="subject" name="subject">
+                                <option value="">Lütfen seçin...</option>
+                                <option value="is-teklifi">İş Teklifi</option>
+                                <option value="soru">Soru</option>
+                                <option value="geri-bildirim">Geri Bildirim</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message">Mesajınız</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Mesajınızı buraya yazın..."></textarea>
+                        </div>
+                        <div class="button-group">
+                            <button type="submit" class="submit-btn">Gönder</button>
+                            <button type="reset" class="reset-btn">Temizle</button>
+                        </div>
+                    </form>
+                </section>
+
+                <div style="display: flex; flex-direction: column; gap: 25px;">
+                    <section class="card" style="margin-top: 0; padding: 2rem;">
+                        <h2>İletişim Bilgilerim</h2>
+                        <div class="goal-list">
+                            <div class="goal-item">📧 <strong>E-posta:</strong> zeynep.sude491@gmail.com</div>
+                            <div class="goal-item">🔗 <strong>GitHub:</strong> <a href="https://github.com/zeynpsude" style="margin-left:5px; color: var(--accent-blue);">Profilim</a></div>
+                            <div class="goal-item">💼 <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/zeynepsudecan" style="margin-left:5px; color: var(--accent-blue);">Profilim</a></div>
+                        </div>
+                    </section>
+
+                    <section class="card" style="margin-top: 0; padding: 2rem;">
+                        <h2>Sık Sorulan Sorular</h2>
+                        <dl style="font-size: 0.9rem;">
+                            <dt style="color: var(--accent-blue); font-weight: 700;">Dönüş süresi?</dt>
+                            <dd style="color: #64748b; margin-bottom: 15px;">Genellikle 24 saat içinde dönüş yapıyorum.</dd>
+                            
+                            <dt style="color: var(--accent-blue); font-weight: 700;">İş birliği?</dt>
+                            <dd style="color: #64748b;">Açık kaynak projelerine her zaman açığım!</dd>
+                        </dl>
+                    </section>
+                </div>
+
+            </div>
+
+            <footer class="main-footer">
+                <p>&copy; 2026 Zeynep Sude Can - Web Programlama Dersi</p>
+            </footer>
+        </main>
+    </div>
 </body>
 </html>
